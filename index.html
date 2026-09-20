@@ -45,11 +45,14 @@
   .search input::placeholder { color: #8E9AB2; }
   .search input:focus { outline: none; }
 
-  .hero { padding: 44px 0 36px; }
+  .banner { display: block; width: 100%; margin: 6px 0 0; border-radius: 22px; overflow: hidden; border: 1px solid rgba(142,193,255,.18);
+    box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 0 60px rgba(47,107,255,.18); background: #05070C; }
+  .banner img { display: block; width: 100%; height: auto; }
+  .hero { padding: 24px 0 36px; }
   .hero h1 { margin: 0 0 12px; font-size: clamp(32px, 5vw, 56px); font-weight: 800; line-height: 1.05; letter-spacing: -.03em; max-width: 16ch;
     background: linear-gradient(180deg, #FFFFFF 40%, #A9C8FF 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .hero p.sub { margin: 0; font-size: 18px; color: #B4C2DE; max-width: 58ch; }
-  .stats { display: flex; margin: 30px 0 0; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,.14); }
+  .stats { display: flex; margin: 22px 0 0; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,.14); }
   .stat { padding: 18px 36px 0 0; margin-right: 36px; }
   .stat b { display: block; font-size: 32px; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; }
   .stat span { font-size: 14px; color: #8E9AB2; }
@@ -111,7 +114,8 @@
     .grid { grid-template-columns: 1fr; gap: 14px; }
     .big { grid-column: auto; }
     .big .title { font-size: 21px; }
-    .hero { padding: 30px 0 28px; }
+    .hero { padding: 18px 0 26px; }
+    .banner { border-radius: 14px; }
     .stat { padding-right: 20px; margin-right: 20px; }
     .stat b { font-size: 26px; }
     .brand small { display: none; }
@@ -134,9 +138,12 @@
       </label>
       <div class="social" id="social"></div>
     </div>
+    <picture class="banner">
+      <source media="(max-width: 620px)" srcset="banner-mobile.jpg">
+      <img src="banner.jpg" alt="Технопульс — новости об образовании, ИИ, робототехнике и ИТ со всего мира" fetchpriority="high">
+    </picture>
     <div class="hero">
-      <h1>ИИ и роботы меняют образование. Мы следим.</h1>
-      <p class="sub">Каждый будний день — восемь самостоятельных заметок о внедрении искусственного интеллекта и робототехники в образование, госуправление и бизнес. Россия, США, Великобритания, страны БРИКС+ и СНГ. По пятницам — афиша форумов на следующую неделю.</p>
+      <p class="sub">Каждый будний день — самостоятельные заметки о внедрении искусственного интеллекта и робототехники в образование, госуправление и бизнес: Россия, США, Великобритания, страны БРИКС+ и СНГ. По пятницам — афиша форумов на следующую неделю.</p>
       <div class="stats">
         <div class="stat"><b id="st-n">—</b><span>материалов в архиве</span></div>
         <div class="stat"><b id="st-c">—</b><span>стран</span></div>
